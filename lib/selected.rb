@@ -1,4 +1,4 @@
-class Selected
+module Selected
   def self.selected?(controller_name, action_name="", id="")
     if controller_matches(controller_name) && action_matches(action_name) && params[:id] == id
       "selected"
