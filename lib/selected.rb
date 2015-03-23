@@ -18,7 +18,7 @@ module Selected
   private
 
   def controller_matches(controller_name)
-    if controller_name.respond_to(:=~)
+    if !(controller_name.is_a? Symbol) && controller_name.respond_to(:=~)
       params[:controller] =~ controller_name.to_s
     else
       params[:controller] == controller_name.to_s
