@@ -18,7 +18,7 @@ module Selected
   private
 
   def controller_matches(controller_name)
-    if controller_name.respond_to?(:=~)
+    if controller_name.is_a?(Regexp)
       controller_name =~ params[:controller]
     else
       controller_name.to_s == params[:controller]
