@@ -19,9 +19,9 @@ module Selected
 
   def controller_matches(controller_name)
     if controller_name.respond_to?(:=~)
-      params[:controller] =~ controller_name.to_s
+      controller_name =~ params[:controller]
     else
-      params[:controller] == controller_name.to_s
+      controller_name.to_s == params[:controller]
     end
   end
 
