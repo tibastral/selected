@@ -18,7 +18,11 @@ module Selected
   private
 
   def controller_matches(controller_name)
-    params[:controller] == controller_name.to_s
+    if controller_name.respond_to(:=~)
+      params[:controller] =~ controller_name.to_s
+    else
+      params[:controller] == controller_name.to_s
+    end
   end
 
   def action_matches(action_name)
