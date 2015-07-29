@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'selected'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.date        = '2014-10-15'
   s.summary     = "Selected"
   s.description = "A simple gem to know if a link should get the class 'active'"
