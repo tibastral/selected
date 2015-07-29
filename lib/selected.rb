@@ -1,7 +1,7 @@
 module Selected
   def selected?(controller_name, action_name="", id="")
     if controller_matches(controller_name) && action_matches(action_name) && params[:id] == id
-      SELECTED_CLASS_NAME || "selected"
+      SELECTED_CLASS_NAME || "active"
     end
     unless action_name.present?
       action_name = params[:action]
@@ -11,7 +11,7 @@ module Selected
     end
 
     if controller_matches(controller_name) && action_matches(action_name) && params[:id] == id
-      SELECTED_CLASS_NAME || "selected"
+      SELECTED_CLASS_NAME || "active"
     end
   end
 
